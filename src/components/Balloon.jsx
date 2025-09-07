@@ -1,6 +1,13 @@
-export const Balloon = ({ num, maincolor }) => {
+export const Balloons = ({ top, left }) => {
+return (
+      <div style={{ top: top, left: left }}>
+    <Balloon />
+  </div>
+)
+};
+const Balloon = ({ num, maincolor }) => {
   return (
-    <div className=" flex flex-col justify-center items-center " style={{position: absolute }}>
+    <div className="absolute flex flex-col justify-center items-center ">
       <div
         className="rounded-[50%] w-[100px] h-[140px] flex flex-col justify-center items-center"
         style={{ backgroundColor: maincolor }}

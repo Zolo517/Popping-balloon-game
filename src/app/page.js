@@ -1,4 +1,4 @@
-import { Balloon } from "@/components/Balloon";
+import { Balloons } from "@/components/Balloon";
 const colors = [
   { maincolor: "PaleVioletRed" },
   { maincolor: "cadetblue" },
@@ -14,14 +14,16 @@ const colors = [
   { maincolor: "purple" },
   { maincolor: "thistle" },
 ];
-const left =Math.floor( Math.random()*1100)
-const top = Math.floor( Math.random()*1000)
+const BalloonPosleft =Math.floor( Math.random()*500)
+const BalloonPostop = Math.floor( Math.random()*700)
 
 export default function Home() {
   return (
     <div className="flex realtive">
       {colors.map((color, index) => (
-        <Balloon
+        <Balloons
+        top = {BalloonPostop}
+        left = {BalloonPosleft}
           key={index + Math.random()}
           num={index + 1}
           maincolor={color.maincolor}
